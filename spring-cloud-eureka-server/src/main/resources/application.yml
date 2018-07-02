@@ -2,6 +2,7 @@ spring:
   application:
     name: cloud-server-eureka
     
+  #必须加上这个，否则监控不到  
   boot:
     admin:
       client:
