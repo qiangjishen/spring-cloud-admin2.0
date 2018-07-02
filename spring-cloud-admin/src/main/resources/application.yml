@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: spring-cloud-admin
+  boot:
+    admin:
+      notify:
+        mail:
+          to: qiangjishen@gmail.com
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
+server:
+  port: 8080
