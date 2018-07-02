@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: spring-cloud-client2
+    
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8080"  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" 
+        
+server:
+  port: 7777
+  
+  
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8080/uaa/oauth/token
+      user-authorization-uri: http://localhost:8080/uaa/oauth/authorize
+      client-id: webapp
+    resource:
+      user-info-uri: http://localhost:8080/uaa/me
+      prefer-token-info: false
+  
